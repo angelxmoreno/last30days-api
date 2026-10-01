@@ -1,0 +1,125 @@
+{
+  "clusters": [
+    {
+      "engagement_total": 4,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "Compio: A thread-per-core async Rust runtime with IOCP/io_uring/polling",
+      "title": "Compio: A thread-per-core async Rust runtime with IOCP/io_uring/polling"
+    },
+    {
+      "engagement_total": 78,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
+      "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio"
+    },
+    {
+      "engagement_total": 3,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "Yazi: Fast terminal file manager written in Rust, based on async I/O",
+      "title": "Yazi: Fast terminal file manager written in Rust, based on async I/O"
+    },
+    {
+      "engagement_total": 113,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "Async Rust vs RTOS showdown (2022)",
+      "title": "Async Rust vs RTOS showdown (2022)"
+    },
+    {
+      "engagement_total": 730,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "Rust is tier-1 language at Microsoft",
+      "title": "Rust is tier-1 language at Microsoft"
+    }
+  ],
+  "freshness_verdicts": [],
+  "generated_at": "2026-10-01T00:06:52.045876Z",
+  "query": "rust async runtimes",
+  "results": [
+    {
+      "candidate_id": "https://github.com/compio-rs/compio",
+      "cluster": 0,
+      "engagement": {
+        "comments": 0,
+        "points": 4
+      },
+      "published_at": "2026-09-24",
+      "relevance_score": 0.4081,
+      "source": "hackernews",
+      "summary": "Compio: A thread-per-core async Rust runtime with IOCP/io_uring/polling",
+      "title": "Compio: A thread-per-core async Rust runtime with IOCP/io_uring/polling",
+      "url": "https://github.com/compio-rs/compio"
+    },
+    {
+      "candidate_id": "https://github.com/feralfirmware/tailtalk",
+      "cluster": 1,
+      "engagement": {
+        "comments": 15,
+        "points": 78
+      },
+      "published_at": "2026-09-12",
+      "relevance_score": 0.399,
+      "source": "hackernews",
+      "summary": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
+      "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
+      "url": "https://github.com/FeralFirmware/TailTalk/"
+    },
+    {
+      "candidate_id": "https://yazi-rs.github.io",
+      "cluster": 2,
+      "engagement": {
+        "comments": 0,
+        "points": 3
+      },
+      "published_at": "2026-09-20",
+      "relevance_score": 0.384,
+      "source": "hackernews",
+      "summary": "Yazi: Fast terminal file manager written in Rust, based on async I/O",
+      "title": "Yazi: Fast terminal file manager written in Rust, based on async I/O",
+      "url": "https://yazi-rs.github.io/"
+    },
+    {
+      "candidate_id": "https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown",
+      "cluster": 3,
+      "engagement": {
+        "comments": 57,
+        "points": 113
+      },
+      "published_at": "2026-09-02",
+      "relevance_score": 0.3672,
+      "source": "hackernews",
+      "summary": "Async Rust vs RTOS showdown (2022)",
+      "title": "Async Rust vs RTOS showdown (2022)",
+      "url": "https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown/"
+    },
+    {
+      "candidate_id": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft",
+      "cluster": 4,
+      "engagement": {
+        "comments": 517,
+        "points": 730
+      },
+      "published_at": "2026-09-10",
+      "relevance_score": 0.3456,
+      "source": "hackernews",
+      "summary": "Rust is tier-1 language at Microsoft",
+      "title": "Rust is tier-1 language at Microsoft",
+      "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/"
+    }
+  ],
+  "schema_version": "1.3",
+  "source_status": {
+    "hackernews": "ok",
+    "reddit": "rate-limited"
+  },
+  "window_days": 30
+}

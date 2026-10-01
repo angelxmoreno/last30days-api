@@ -1,0 +1,742 @@
+{
+  "config": {
+    "config_source": "env_only",
+    "global_env": "/private/tmp/claude-501/-Users-angelmoreno-Documents-projects-last30days-api/f1d950fe-b762-4e04-8fe7-94f7ceb52064/scratchpad/up/../fakehome/.config/last30days/.env",
+    "host": null,
+    "host_lane_file_ignored": false
+  },
+  "engine_version": "3.25.0",
+  "from_cache": false,
+  "generated_at": "2026-10-01T00:41:31.830413+00:00",
+  "mode": "config",
+  "permissions": {
+    "action_items": [],
+    "conditional_writes": [],
+    "credentials": {
+      "github": {
+        "label": "GitHub token or gh auth",
+        "present": true
+      },
+      "google": {
+        "label": "Google/Gemini API key",
+        "present": false
+      },
+      "openai": {
+        "label": "OpenAI API key",
+        "present": false
+      },
+      "openrouter": {
+        "label": "OpenRouter API key",
+        "present": false
+      },
+      "perplexity": {
+        "label": "Perplexity API key",
+        "present": false
+      },
+      "scrapecreators": {
+        "label": "ScrapeCreators API key",
+        "present": false
+      },
+      "x_bearer": {
+        "label": "X API bearer token",
+        "present": false
+      },
+      "xai": {
+        "label": "xAI API key",
+        "present": false
+      }
+    },
+    "external_commands": {
+      "arxiv-pp-cli": {
+        "status": "unavailable"
+      },
+      "brightdata": {
+        "status": "unavailable"
+      },
+      "digg-pp-cli": {
+        "status": "unavailable"
+      },
+      "gh": {
+        "status": "available"
+      },
+      "techmeme-pp-cli": {
+        "status": "unavailable"
+      },
+      "trustpilot-pp-cli": {
+        "status": "unavailable"
+      },
+      "yt-dlp": {
+        "status": "available"
+      }
+    },
+    "local_reads": {
+      "browser_cookies": {
+        "browsers": [],
+        "mode": "off",
+        "reads_values": false,
+        "status": "off"
+      },
+      "config_source": "env_only",
+      "project_config": {
+        "ignored_keys": [],
+        "ignored_path": null,
+        "status": "not_active",
+        "trusted": false
+      }
+    },
+    "local_writes": [
+      {
+        "kind": "report",
+        "path": "/private/tmp/claude-501/-Users-angelmoreno-Documents-projects-last30days-api/f1d950fe-b762-4e04-8fe7-94f7ceb52064/scratchpad/up/../mem"
+      }
+    ],
+    "network": {
+      "available_sources": [
+        "reddit",
+        "youtube",
+        "hackernews",
+        "polymarket",
+        "github",
+        "grounding"
+      ],
+      "endpoint_overrides": [],
+      "ignored_endpoint_overrides": [],
+      "native_search": false
+    },
+    "safe": true,
+    "status": "ready"
+  },
+  "run_evidence": {
+    "at": "2026-10-01T00:39:13.565643+00:00",
+    "fresh": true,
+    "present": true,
+    "topic": "bitcoin price election"
+  },
+  "setup": {
+    "keys_present": {
+      "BRAVE_API_KEY": false,
+      "BSKY_APP_PASSWORD": false,
+      "EXA_API_KEY": false,
+      "GEMINI_API_KEY": false,
+      "GITHUB_TOKEN": false,
+      "GOOGLE_API_KEY": false,
+      "GROQ_API_KEY": false,
+      "OPENAI_API_KEY": false,
+      "OPENROUTER_API_KEY": false,
+      "PARALLEL_API_KEY": false,
+      "PERPLEXITY_API_KEY": false,
+      "SCRAPECREATORS_API_KEY": false,
+      "SERPER_API_KEY": false,
+      "TRUTHSOCIAL_TOKEN": false,
+      "XAI_API_KEY": false,
+      "XQUIK_API_KEY": false,
+      "X_BEARER_TOKEN": false,
+      "bluesky_app_password": false,
+      "x_browser_cookies": false
+    },
+    "setup_complete": false,
+    "unsubstituted_templates": []
+  },
+  "sources": {
+    "amazon": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "cli": {
+        "detail": "brightdata not found on PATH",
+        "name": "brightdata",
+        "off_path": false,
+        "optional": false,
+        "status": "missing"
+      },
+      "detail": "brightdata not found on PATH",
+      "fix": "npm i -g @brightdata/cli && brightdata login",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "brightdata on the agent-subprocess PATH, logged in",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "arxiv": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "cli": {
+        "detail": "arxiv-pp-cli not found on PATH",
+        "name": "arxiv-pp-cli",
+        "off_path": false,
+        "optional": false,
+        "status": "missing"
+      },
+      "detail": "arxiv-pp-cli not found on PATH",
+      "fix": "repair the arxiv-pp-cli install; see CONFIGURATION.md for setup options for this source (cli: npx -y @mvanhorn/printing-press-library@0.1.16 install arxiv --cli-only)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "arxiv-pp-cli on the agent-subprocess PATH",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "bluesky": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "generate an app password at bsky.app/settings/app-passwords and add BSKY_HANDLE plus BSKY_APP_PASSWORD to ~/.config/last30days/.env (cli: BSKY_HANDLE=<your-handle> BSKY_APP_PASSWORD=<xxxx-xxxx-xxxx-xxxx>)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "BSKY_HANDLE + BSKY_APP_PASSWORD",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "digg": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "cli": {
+        "detail": "digg-pp-cli not found on PATH",
+        "name": "digg-pp-cli",
+        "off_path": false,
+        "optional": false,
+        "status": "missing"
+      },
+      "detail": "digg-pp-cli not found on PATH",
+      "fix": "install the Digg CLI through the Printing Press library, then re-run setup so the source activates (cli: npx -y @mvanhorn/printing-press-library@0.1.16 install digg --cli-only)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "digg-pp-cli on the agent-subprocess PATH",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "github": {
+      "active_backend": null,
+      "audit_state": "working",
+      "backends": null,
+      "cli": {
+        "detail": "gh version 2.98.0 (2026-08-20)",
+        "name": "gh",
+        "off_path": false,
+        "optional": true,
+        "status": "ok"
+      },
+      "detail": "authenticated tier (GITHUB_TOKEN or gh CLI)",
+      "fix": "",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "none (GITHUB_TOKEN or gh CLI optional)",
+      "run_outcome": {
+        "at": "2026-10-01T00:39:13.223166Z",
+        "detail": null,
+        "fix_hint": null,
+        "items_returned": 1,
+        "state": "ok"
+      },
+      "status": "ok",
+      "tier": "ok"
+    },
+    "hackernews": {
+      "active_backend": null,
+      "audit_state": "working",
+      "backends": null,
+      "detail": "",
+      "fix": "",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "none (free Algolia API)",
+      "run_outcome": null,
+      "status": "ok",
+      "tier": "ok"
+    },
+    "instagram": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "comments": {
+        "enabled": false
+      },
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "jobs": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "",
+      "mode": "single",
+      "note": "on-demand source: no configuration needed",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "none; activates for company topics or --hiring-signals",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "library": {
+      "active_backend": null,
+      "audit_state": "working",
+      "backends": null,
+      "detail": "",
+      "fix": "",
+      "mode": "single",
+      "note": "no saved briefs yet - runs you save build this over time",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "none (local SQLite)",
+      "run_outcome": null,
+      "status": "ok",
+      "tier": "ok"
+    },
+    "linkedin": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY + INCLUDE_SOURCES=linkedin",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "meta_ads": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY + INCLUDE_SOURCES=meta_ads",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "perplexity": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "set PERPLEXITY_API_KEY or OPENROUTER_API_KEY in ~/.config/last30days/.env, then add perplexity to INCLUDE_SOURCES",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "PERPLEXITY_API_KEY or OPENROUTER_API_KEY + INCLUDE_SOURCES=perplexity",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "pinterest": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY; requested-only (--search pinterest)",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "polymarket": {
+      "active_backend": null,
+      "audit_state": "working",
+      "backends": null,
+      "detail": "",
+      "fix": "",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "none (public API)",
+      "run_outcome": {
+        "at": "2026-10-01T00:39:13.514482Z",
+        "detail": null,
+        "fix_hint": null,
+        "items_returned": 4,
+        "state": "ok"
+      },
+      "status": "ok",
+      "tier": "ok"
+    },
+    "reddit": {
+      "active_backend": null,
+      "audit_state": "working",
+      "backends": [
+        {
+          "detail": "public keyless composite (lanes: rss, listing, arctic, shreddit)",
+          "fix": "",
+          "name": "public",
+          "requires": "none (public endpoints)",
+          "status": "ok"
+        },
+        {
+          "detail": "SCRAPECREATORS_API_KEY not set",
+          "fix": "set SCRAPECREATORS_API_KEY (free 10,000-call signup: python3 skills/last30days/scripts/last30days.py setup --github)",
+          "name": "scrapecreators",
+          "requires": "SCRAPECREATORS_API_KEY",
+          "status": "missing"
+        }
+      ],
+      "backups": [
+        {
+          "armed": false,
+          "name": "ScrapeCreators backfill",
+          "note": "fills in when the free public path returns nothing"
+        }
+      ],
+      "detail": "",
+      "fix": "",
+      "mode": "conditional",
+      "note": "public keyless composite (default); no ScrapeCreators key for backfill",
+      "pin_flag": null,
+      "pin_var": "LAST30DAYS_REDDIT_BACKEND",
+      "pinned": false,
+      "requires": "none (public endpoints)",
+      "run_outcome": null,
+      "status": "ok",
+      "tier": "ok"
+    },
+    "techmeme": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "cli": {
+        "detail": "techmeme-pp-cli not found on PATH",
+        "name": "techmeme-pp-cli",
+        "off_path": false,
+        "optional": false,
+        "status": "missing"
+      },
+      "detail": "techmeme-pp-cli not found on PATH",
+      "fix": "repair the techmeme-pp-cli install; see CONFIGURATION.md for setup options for this source (cli: npx -y @mvanhorn/printing-press-library@0.1.16 install techmeme --cli-only)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "techmeme-pp-cli on the agent-subprocess PATH",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "telegram": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY + INCLUDE_SOURCES=telegram + TELEGRAM_SOURCES",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "threads": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY + INCLUDE_SOURCES=threads",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "tiktok": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "comments": {
+        "enabled": false
+      },
+      "detail": "",
+      "fix": "ask the agent to run setup with the GitHub device flow (free 10,000-call signup; the key is persisted automatically) (cli: python3 skills/last30days/scripts/last30days.py setup --github)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "SCRAPECREATORS_API_KEY",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "trustpilot": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "cli": {
+        "detail": "trustpilot-pp-cli not found on PATH",
+        "name": "trustpilot-pp-cli",
+        "off_path": false,
+        "optional": false,
+        "status": "missing"
+      },
+      "detail": "trustpilot-pp-cli not found on PATH",
+      "fix": "repair the trustpilot-pp-cli install; see CONFIGURATION.md for setup options for this source (cli: npx -y @mvanhorn/printing-press-library@0.1.16 install trustpilot --cli-only)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "trustpilot-pp-cli on the agent-subprocess PATH",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "truthsocial": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "log into truthsocial.com in your browser and let setup read the session cookie, or copy the bearer token from your browser's dev tools into ~/.config/last30days/.env (cli: python3 skills/last30days/scripts/last30days.py setup --allow-browser-cookies)",
+      "mode": "single",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "TRUTHSOCIAL_TOKEN",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "web": {
+      "active_backend": "keyless",
+      "audit_state": "not-working",
+      "backends": [
+        {
+          "detail": "BRAVE_API_KEY not set",
+          "fix": "set BRAVE_API_KEY in ~/.config/last30days/.env",
+          "name": "brave",
+          "requires": "BRAVE_API_KEY",
+          "status": "missing"
+        },
+        {
+          "detail": "EXA_API_KEY not set",
+          "fix": "set EXA_API_KEY in ~/.config/last30days/.env",
+          "name": "exa",
+          "requires": "EXA_API_KEY",
+          "status": "missing"
+        },
+        {
+          "detail": "SERPER_API_KEY not set",
+          "fix": "set SERPER_API_KEY in ~/.config/last30days/.env",
+          "name": "serper",
+          "requires": "SERPER_API_KEY",
+          "status": "missing"
+        },
+        {
+          "detail": "PARALLEL_API_KEY not set",
+          "fix": "set PARALLEL_API_KEY in ~/.config/last30days/.env",
+          "name": "parallel",
+          "requires": "PARALLEL_API_KEY",
+          "status": "missing"
+        },
+        {
+          "detail": "keyless search floor (no paid key; lower quality)",
+          "fix": "",
+          "name": "keyless",
+          "requires": "no key; suppressed on native-search hosts",
+          "status": "degraded"
+        }
+      ],
+      "detail": "keyless search floor (no paid key; lower quality)",
+      "fix": "",
+      "mode": "alternative",
+      "note": "will use: keyless",
+      "pin_flag": "--web-backend",
+      "pin_var": null,
+      "pinned": false,
+      "requires": "no key; suppressed on native-search hosts",
+      "run_outcome": null,
+      "status": "degraded",
+      "tier": "warn"
+    },
+    "x": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": [
+        {
+          "detail": "X browser cookies (AUTH_TOKEN/CT0) not configured",
+          "fix": "run setup with browser-cookie consent: python3 skills/last30days/scripts/last30days.py setup --allow-browser-cookies",
+          "name": "bird",
+          "requires": "X browser cookies (AUTH_TOKEN/CT0) + node",
+          "status": "missing"
+        },
+        {
+          "detail": "XAI_API_KEY not set",
+          "fix": "set XAI_API_KEY in ~/.config/last30days/.env",
+          "name": "xai",
+          "requires": "XAI_API_KEY (xAI/Grok live search)",
+          "status": "missing"
+        },
+        {
+          "detail": "xurl CLI not found on PATH",
+          "fix": "npm install -g xurl && xurl auth oauth2 login",
+          "name": "xurl",
+          "requires": "xurl CLI installed + OAuth2 login",
+          "status": "missing"
+        },
+        {
+          "detail": "XQUIK_API_KEY not set",
+          "fix": "set XQUIK_API_KEY in ~/.config/last30days/.env",
+          "name": "xquik",
+          "requires": "XQUIK_API_KEY (xquik.com)",
+          "status": "missing"
+        },
+        {
+          "detail": "grok CLI not found on PATH",
+          "fix": "install the Grok CLI: curl -fsSL https://x.ai/cli/install.sh | bash, then run `grok login`",
+          "name": "grok",
+          "requires": "grok CLI installed + signed in (no X credential)",
+          "status": "missing"
+        },
+        {
+          "detail": "X_BEARER_TOKEN not set",
+          "fix": "set X_BEARER_TOKEN in ~/.config/last30days/.env",
+          "name": "xapi",
+          "requires": "X_BEARER_TOKEN (X API v2)",
+          "status": "missing"
+        }
+      ],
+      "backups": [
+        {
+          "armed": false,
+          "name": "X auth path",
+          "note": "no auth path armed"
+        }
+      ],
+      "detail": "",
+      "fix": "run setup with browser-cookie consent: python3 skills/last30days/scripts/last30days.py setup --allow-browser-cookies",
+      "mode": "alternative",
+      "note": "no backend configured (chain: bird -> xai -> xurl -> xquik -> grok -> xapi)",
+      "pin_flag": null,
+      "pin_var": "LAST30DAYS_X_BACKEND",
+      "pinned": false,
+      "requires": "X browser cookies (AUTH_TOKEN/CT0) + node",
+      "run_outcome": null,
+      "status": "unconfigured",
+      "tier": "off"
+    },
+    "xiaohongshu": {
+      "active_backend": null,
+      "audit_state": "could-be-on",
+      "backends": null,
+      "detail": "",
+      "fix": "start a local x-mcp browser plugin or xpzouying/xiaohongshu-mcp service that can see your logged-in Xiaohongshu browser session; set XIAOHONGSHU_API_BASE only when it runs on a custom host/port (cli: XIAOHONGSHU_API_BASE=http://your-host:18060  # only for a custom host; leave unset to auto-probe localhost and host.docker.internal)",
+      "mode": "single",
+      "note": "auto-probes http://localhost:18060 first, then http://host.docker.internal:18060",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "logged-in Xiaohongshu browser-session service; requested-only (--search xhs)",
+      "run_outcome": null,
+      "status": "opt-in",
+      "tier": "off"
+    },
+    "youtube": {
+      "active_backend": null,
+      "audit_state": "not-working",
+      "backends": [
+        {
+          "detail": "yt-dlp version probe timed out after 5s",
+          "fix": "re-run doctor; if the timeout persists: brew reinstall yt-dlp",
+          "name": "yt-dlp",
+          "requires": "yt-dlp on the agent-subprocess PATH",
+          "status": "timeout"
+        },
+        {
+          "detail": "SCRAPECREATORS_API_KEY not set",
+          "fix": "set SCRAPECREATORS_API_KEY (free 10,000-call signup: python3 skills/last30days/scripts/last30days.py setup --github)",
+          "name": "scrapecreators",
+          "requires": "SCRAPECREATORS_API_KEY",
+          "status": "missing"
+        }
+      ],
+      "backups": [
+        {
+          "armed": false,
+          "name": "ScrapeCreators transcript/search backstop",
+          "note": "used when yt-dlp is rate-limited or bot-gated"
+        }
+      ],
+      "cli": {
+        "detail": "yt-dlp version probe timed out after 5s",
+        "name": "yt-dlp",
+        "off_path": false,
+        "optional": false,
+        "status": "timeout"
+      },
+      "comments": {
+        "enabled": true
+      },
+      "detail": "yt-dlp version probe timed out after 5s",
+      "fix": "re-run doctor; if the timeout persists: brew reinstall yt-dlp",
+      "mode": "alternative",
+      "note": "",
+      "pin_flag": null,
+      "pin_var": null,
+      "pinned": false,
+      "requires": "yt-dlp on the agent-subprocess PATH",
+      "run_outcome": null,
+      "status": "timeout",
+      "tier": "error"
+    }
+  }
+}

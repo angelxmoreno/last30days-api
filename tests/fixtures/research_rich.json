@@ -1,0 +1,279 @@
+{
+  "clusters": [
+    {
+      "engagement_total": 3,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "WSJ reports OpenAI scrapped GPT-6.1 Astra over safety concerns",
+      "title": "WSJ reports OpenAI scrapped GPT-6.1 Astra over safety concerns"
+    },
+    {
+      "engagement_total": 738,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005"
+    },
+    {
+      "engagement_total": 4,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "Check is your OpenAI GPT-6-Astra nerfed?",
+      "title": "Check is your OpenAI GPT-6-Astra nerfed?"
+    },
+    {
+      "engagement_total": 3,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "OpenAI retiring GPT-5.5 on October 14",
+      "title": "OpenAI retiring GPT-5.5 on October 14"
+    },
+    {
+      "engagement_total": 172,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "a lot of people are sick of downgrade posts, and i get it. many of these posts are based on vibes and placebo and there&#39;s multiple of them a day. but this is an obvious case of an actual downgrade. downgrades are a fact and happen more often than most of us notice. they are anti consumer and it&#39;s important that we, as customers, speak up about them. it&#39;s always the same pattern: releas",
+      "title": "The GPT 6 Astra Downgrade Was Real. OpenAI Acknowledged And Fixed It (Partially)"
+    },
+    {
+      "engagement_total": 1148,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "&#32; submitted by &#32; /u/lurker_bee &#32; to &#32; r/technology [link] &#32; [comments]",
+      "title": "'Defeated' GPT-6 Astra model spent several hours just farming potatoes after being blown up by a Creeper in Minecraft \u2014 OpenAI offering gets further than any other AI system in 141-hour test"
+    },
+    {
+      "engagement_total": 240,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+      "title": "OpenAI's GPT-6 Astra on ARC-AGI-3"
+    },
+    {
+      "engagement_total": 278,
+      "sources": [
+        "hackernews"
+      ],
+      "summary": "OpenAI begins rolling out GPT-6 Astra",
+      "title": "OpenAI begins rolling out GPT-6 Astra"
+    },
+    {
+      "engagement_total": 1441,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "GPT\u20116 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenA AGI pushed back to Black Friday My first profound conversation with AGI",
+      "title": "GPT-6 Astra | OpenAI"
+    },
+    {
+      "engagement_total": 5563,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "\"You're not crazy, you're Jesus \" has to be the most unhinged customer service reply ever. Ai should stop giving advice on mental illness I wonder why there's no satanic panic about AI. When I grew up, Christians were terrified of Dungeons and Dragons and heavy metal music. Now we have a black box nobody understands talking to people an",
+      "title": "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus. | Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt."
+    },
+    {
+      "engagement_total": 24964,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "It's not just ChatGPT: https://downdetector.com/ Affecting Claude, Grok, Cursor, and Gemini as well. John Connor actually did it... But how will middle managers figure out how to interpret their team\u2019s morning standups?!?!???????!!!??",
+      "title": "ChatGPT down: OpenAI chatbot not working in major outage"
+    },
+    {
+      "engagement_total": 1498,
+      "sources": [
+        "reddit"
+      ],
+      "summary": "It benchmaxxing doesn't imply it's actually 98% of the capability. It is not (although, it's still impressive for sure) But the issue is also that 99.9% of users don't actually need a frontier model, yet they keep spending money like a shark swims to breathe. AI isn't about what you need, it's about what benefits you. The majority of spending on AI right now is for software development, where you absolutely benefit from using frontier models. For example,",
+      "title": "Closed Source AI released their best model: GPT-6 Astra. That same week a Chinese Open-Source model was at 98% of its capability, but at 1% of the cost."
+    }
+  ],
+  "freshness_verdicts": [],
+  "generated_at": "2026-10-01T00:39:10.686400Z",
+  "query": "OpenAI GPT",
+  "results": [
+    {
+      "candidate_id": "https://runtimewire.com/article/wsj-reports-openai-scrapped-gpt-6-1-astra-over-safety-concerns",
+      "cluster": 0,
+      "engagement": {
+        "comments": 3,
+        "points": 3
+      },
+      "published_at": "2026-09-28",
+      "relevance_score": 0.4871,
+      "source": "hackernews",
+      "summary": "WSJ reports OpenAI scrapped GPT-6.1 Astra over safety concerns",
+      "title": "WSJ reports OpenAI scrapped GPT-6.1 Astra over safety concerns",
+      "url": "https://runtimewire.com/article/wsj-reports-openai-scrapped-gpt-6-1-astra-over-safety-concerns"
+    },
+    {
+      "candidate_id": "https://cryptocellar.org/bgac/the-mvueh-break.html",
+      "cluster": 1,
+      "engagement": {
+        "comments": 447,
+        "points": 738
+      },
+      "published_at": "2026-09-22",
+      "relevance_score": 0.4798,
+      "source": "hackernews",
+      "summary": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html"
+    },
+    {
+      "candidate_id": "https://is-my-astra-real.pages.dev",
+      "cluster": 2,
+      "engagement": {
+        "comments": 0,
+        "points": 4
+      },
+      "published_at": "2026-09-27",
+      "relevance_score": 0.4693,
+      "source": "hackernews",
+      "summary": "Check is your OpenAI GPT-6-Astra nerfed?",
+      "title": "Check is your OpenAI GPT-6-Astra nerfed?",
+      "url": "https://is-my-astra-real.pages.dev/"
+    },
+    {
+      "candidate_id": "https://gizmochina.com/2026/09/16/openai-retiring-gpt-5-5-on-october-14-you-may-need-to-update-your-workflow",
+      "cluster": 3,
+      "engagement": {
+        "comments": 0,
+        "points": 3
+      },
+      "published_at": "2026-09-20",
+      "relevance_score": 0.4352,
+      "source": "hackernews",
+      "summary": "OpenAI retiring GPT-5.5 on October 14",
+      "title": "OpenAI retiring GPT-5.5 on October 14",
+      "url": "https://www.gizmochina.com/2026/09/16/openai-retiring-gpt-5-5-on-october-14-you-may-need-to-update-your-workflow/"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/openai/comments/1wedbfi/the_gpt_6_astra_downgrade_was_real_openai",
+      "cluster": 4,
+      "engagement": {
+        "num_comments": 53,
+        "score": 172
+      },
+      "published_at": "2026-09-12",
+      "relevance_score": 0.4345,
+      "source": "reddit",
+      "summary": "a lot of people are sick of downgrade posts, and i get it. many of these posts are based on vibes and placebo and there&#39;s multiple of them a day. but this is an obvious case of an actual downgrade. downgrades are a fact and happen more often than most of us notice. they are anti consumer and it&#39;s important that we, as customers, speak up about them. it&#39;s always the same pattern: releas",
+      "title": "The GPT 6 Astra Downgrade Was Real. OpenAI Acknowledged And Fixed It (Partially)",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1wedbfi/the_gpt_6_astra_downgrade_was_real_openai/"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/technology/comments/1wj7sa4/defeated_gpt6_astra_model_spent_several_hours",
+      "cluster": 5,
+      "engagement": {
+        "num_comments": 212,
+        "score": 1148
+      },
+      "published_at": "2026-09-17",
+      "relevance_score": 0.4293,
+      "source": "reddit",
+      "summary": "&#32; submitted by &#32; /u/lurker_bee &#32; to &#32; r/technology [link] &#32; [comments]",
+      "title": "'Defeated' GPT-6 Astra model spent several hours just farming potatoes after being blown up by a Creeper in Minecraft \u2014 OpenAI offering gets further than any other AI system in 141-hour test",
+      "url": "https://www.reddit.com/r/technology/comments/1wj7sa4/defeated_gpt6_astra_model_spent_several_hours/"
+    },
+    {
+      "candidate_id": "https://arcprize.org/blog/astra",
+      "cluster": 6,
+      "engagement": {
+        "comments": 163,
+        "points": 240
+      },
+      "published_at": "2026-09-03",
+      "relevance_score": 0.4102,
+      "source": "hackernews",
+      "summary": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+      "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+      "url": "https://arcprize.org/blog/astra"
+    },
+    {
+      "candidate_id": "https://cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+      "cluster": 7,
+      "engagement": {
+        "comments": 253,
+        "points": 278
+      },
+      "published_at": "2026-09-03",
+      "relevance_score": 0.4059,
+      "source": "hackernews",
+      "summary": "OpenAI begins rolling out GPT-6 Astra",
+      "title": "OpenAI begins rolling out GPT-6 Astra",
+      "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/openai/comments/1w6hf6g/gpt6_astra_openai",
+      "cluster": 8,
+      "engagement": {
+        "num_comments": 307,
+        "score": 1441
+      },
+      "published_at": "2026-09-03",
+      "relevance_score": 0.3968,
+      "source": "reddit",
+      "summary": "GPT\u20116 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenA AGI pushed back to Black Friday My first profound conversation with AGI",
+      "title": "GPT-6 Astra | OpenAI",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1w6hf6g/gpt6_astra_openai/"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/technology/comments/1wbjeys/man_told_chatgpt_he_was_feeling_delusional",
+      "cluster": 9,
+      "engagement": {
+        "num_comments": 311,
+        "score": 5563
+      },
+      "published_at": "2026-09-09",
+      "relevance_score": 0.3431,
+      "source": "reddit",
+      "summary": "\"You're not crazy, you're Jesus \" has to be the most unhinged customer service reply ever. Ai should stop giving advice on mental illness I wonder why there's no satanic panic about AI. When I grew up, Christians were terrified of Dungeons and Dragons and heavy metal music. Now we have a black box nobody understands talking to people an",
+      "title": "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus. | Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt.",
+      "url": "https://www.reddit.com/r/technology/comments/1wbjeys/man_told_chatgpt_he_was_feeling_delusional/"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/technology/comments/1w6a3m7/chatgpt_down_openai_chatbot_not_working_in_major",
+      "cluster": 10,
+      "engagement": {
+        "num_comments": 2480,
+        "score": 24964
+      },
+      "published_at": "2026-09-03",
+      "relevance_score": 0.2916,
+      "source": "reddit",
+      "summary": "It's not just ChatGPT: https://downdetector.com/ Affecting Claude, Grok, Cursor, and Gemini as well. John Connor actually did it... But how will middle managers figure out how to interpret their team\u2019s morning standups?!?!???????!!!??",
+      "title": "ChatGPT down: OpenAI chatbot not working in major outage",
+      "url": "https://www.reddit.com/r/technology/comments/1w6a3m7/chatgpt_down_openai_chatbot_not_working_in_major/"
+    },
+    {
+      "candidate_id": "https://reddit.com/r/futurology/comments/1webm9a/closed_source_ai_released_their_best_model_gpt6",
+      "cluster": 11,
+      "engagement": {
+        "num_comments": 435,
+        "score": 1498
+      },
+      "published_at": "2026-09-12",
+      "relevance_score": 0.0868,
+      "source": "reddit",
+      "summary": "It benchmaxxing doesn't imply it's actually 98% of the capability. It is not (although, it's still impressive for sure) But the issue is also that 99.9% of users don't actually need a frontier model, yet they keep spending money like a shark swims to breathe. AI isn't about what you need, it's about what benefits you. The majority of spending on AI right now is for software development, where you absolutely benefit from using frontier models. For example,",
+      "title": "Closed Source AI released their best model: GPT-6 Astra. That same week a Chinese Open-Source model was at 98% of its capability, but at 1% of the cost.",
+      "url": "https://www.reddit.com/r/Futurology/comments/1webm9a/closed_source_ai_released_their_best_model_gpt6/"
+    }
+  ],
+  "schema_version": "1.3",
+  "source_status": {
+    "hackernews": "ok",
+    "reddit": "ok"
+  },
+  "window_days": 30
+}

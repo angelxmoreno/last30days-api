@@ -1,0 +1,273 @@
+{
+  "domain": "",
+  "feeds": {
+    "category": null,
+    "sources": [
+      "reddit",
+      "hackernews"
+    ],
+    "subreddits": [
+      "all"
+    ]
+  },
+  "generated_at": "2026-10-01T00:07:12.644723Z",
+  "kind": "discovery",
+  "outcome": "ok",
+  "results": [
+    {
+      "command": "/last30days \"GPT 6.1 Sol Near-Astra\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 929,
+          "points": 1048
+        }
+      },
+      "evidence_urls": [
+        "https://openai.com/index/introducing-gpt-6-1-sol/"
+      ],
+      "last_surfaced": null,
+      "momentum": "new-this-week",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "GPT 6.1 Sol Near-Astra",
+      "velocity_score": 1712.13,
+      "why_spiking": "1 listing item on hackernews generated 1,977 native interactions. GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"Gemini 4 Argon\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 581,
+          "points": 866
+        }
+      },
+      "evidence_urls": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      ],
+      "last_surfaced": null,
+      "momentum": "new-this-week",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 2,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "Gemini 4 Argon",
+      "velocity_score": 1534.78,
+      "why_spiking": "1 listing item on hackernews generated 1,447 native interactions. Gemini 4 Argon",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"Owed Nvidia\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 456,
+          "points": 1087
+        }
+      },
+      "evidence_urls": [
+        "https://colo.to/nvidia-stock-narrative.html"
+      ],
+      "last_surfaced": null,
+      "momentum": "new-this-week",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 3,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "Owed Nvidia",
+      "velocity_score": 1157.25,
+      "why_spiking": "1 listing item on hackernews generated 1,543 native interactions. Owed a billion dollars in Nvidia stock",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"MCP\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 332,
+          "points": 595
+        }
+      },
+      "evidence_urls": [
+        "https://earendil.com/posts/you-said-no-mcp/"
+      ],
+      "last_surfaced": null,
+      "momentum": "new-this-week",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 4,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "MCP",
+      "velocity_score": 983.23,
+      "why_spiking": "1 listing item on hackernews generated 927 native interactions. You said no MCP",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"Claude Opus 5.5\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 1133,
+          "points": 1806
+        }
+      },
+      "evidence_urls": [
+        "https://www.anthropic.com/claude-opus-5-5"
+      ],
+      "last_surfaced": null,
+      "momentum": "building",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 5,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "Claude Opus 5.5",
+      "velocity_score": 929.39,
+      "why_spiking": "1 listing item on hackernews generated 2,939 native interactions. Claude Opus 5.5",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"Dutch Microsoft NixOS\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 581,
+          "points": 1019
+        }
+      },
+      "evidence_urls": [
+        "https://www.dawo.community/en/"
+      ],
+      "last_surfaced": null,
+      "momentum": "new-this-week",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 6,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "Dutch Microsoft NixOS",
+      "velocity_score": 907.11,
+      "why_spiking": "1 listing item on hackernews generated 1,600 native interactions. Dutch governments builds alternative for Microsoft based on NixOS",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"iPhone Duo\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 2545,
+          "points": 1485
+        }
+      },
+      "evidence_urls": [
+        "https://www.apple.com/iphone-duo/"
+      ],
+      "last_surfaced": null,
+      "momentum": "building",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 7,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "iPhone Duo",
+      "velocity_score": 840.31,
+      "why_spiking": "1 listing item on hackernews generated 4,030 native interactions. iPhone Duo",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"GPT-6 Sol and Luna\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 855,
+          "points": 1777
+        }
+      },
+      "evidence_urls": [
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "last_surfaced": null,
+      "momentum": "building",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 8,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "GPT-6 Sol and Luna",
+      "velocity_score": 832.31,
+      "why_spiking": "1 listing item on hackernews generated 2,632 native interactions. GPT-6 Sol and Luna",
+      "x_article_angle": null
+    },
+    {
+      "command": "/last30days \"GPT-6 Astra\"",
+      "corroboration_count": 1,
+      "covered": false,
+      "engagement": {
+        "hackernews": {
+          "comments": 2081,
+          "points": 2279
+        }
+      },
+      "evidence_urls": [
+        "https://openai.com/index/gpt-6-astra/"
+      ],
+      "last_surfaced": null,
+      "momentum": "building",
+      "podcast_angle": null,
+      "previously_surfaced_count": 0,
+      "rank": 9,
+      "sources": [
+        "hackernews"
+      ],
+      "top_comment": null,
+      "topic": "GPT-6 Astra",
+      "velocity_score": 809.63,
+      "why_spiking": "1 listing item on hackernews generated 4,360 native interactions. GPT-6 Astra",
+      "x_article_angle": null
+    }
+  ],
+  "schema_version": "1.1",
+  "source_status": {
+    "digg": "skipped-unconfigured",
+    "hackernews": "ok",
+    "reddit": "no-results",
+    "x": "skipped-unconfigured"
+  },
+  "warnings": [
+    "Discovery evidence is single-source; configure Digg for broader confirmation."
+  ],
+  "weak_signal": null,
+  "window_days": 30
+}

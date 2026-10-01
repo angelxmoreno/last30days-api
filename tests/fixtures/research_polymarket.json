@@ -1,0 +1,125 @@
+{
+  "clusters": [
+    {
+      "engagement_total": 240739.30039,
+      "sources": [
+        "polymarket"
+      ],
+      "summary": "Bitcoin price on October 2? Will the price of Bitcoin be less than $74,000 on October 2?",
+      "title": "Bitcoin price on October 2?"
+    },
+    {
+      "engagement_total": 11967861.860446999,
+      "sources": [
+        "polymarket"
+      ],
+      "summary": "down 2.9% this month",
+      "title": "What price will Bitcoin hit in 2026?"
+    },
+    {
+      "engagement_total": 14437833.073339004,
+      "sources": [
+        "polymarket"
+      ],
+      "summary": "down 2.9% this month",
+      "title": "What price will Bitcoin hit in September?"
+    },
+    {
+      "engagement_total": 272746.16991,
+      "sources": [
+        "polymarket"
+      ],
+      "summary": "down 5.1% today",
+      "title": "Bitcoin price on October 1?"
+    },
+    {
+      "engagement_total": 0,
+      "sources": [
+        "github"
+      ],
+      "summary": "**Topic:** Quantitative trading; machine learning for quant & trading; agentic coding techniques; LLMs & multimodal LLMs; and autonomous research (autoresearch / AI-scientist) systems \u2014 methods, papers, tools  \n**Date:** 2026-09-07\n\n**Source:** arxiv \u00b7 2026-09-04\n**Link:** https://arxiv.org/abs/2609",
+      "title": "Latest: PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting"
+    }
+  ],
+  "freshness_verdicts": [],
+  "generated_at": "2026-10-01T00:39:13.565422Z",
+  "query": "bitcoin price election",
+  "results": [
+    {
+      "candidate_id": "https://polymarket.com/event/bitcoin-price-on-october-2-2026",
+      "cluster": 0,
+      "engagement": {
+        "liquidity": 240739.30039,
+        "volume": 28393.932151999998
+      },
+      "published_at": "2026-10-01",
+      "relevance_score": 0.46,
+      "source": "polymarket",
+      "summary": "Bitcoin price on October 2? Will the price of Bitcoin be less than $74,000 on October 2?",
+      "title": "Bitcoin price on October 2?",
+      "url": "https://polymarket.com/event/bitcoin-price-on-october-2-2026"
+    },
+    {
+      "candidate_id": "https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027",
+      "cluster": 1,
+      "engagement": {
+        "liquidity": 4236053.64006,
+        "volume": 11967861.860446999
+      },
+      "published_at": "2026-10-01",
+      "relevance_score": 0.4521,
+      "source": "polymarket",
+      "summary": "down 2.9% this month",
+      "title": "What price will Bitcoin hit in 2026?",
+      "url": "https://polymarket.com/event/what-price-will-bitcoin-hit-before-2027"
+    },
+    {
+      "candidate_id": "https://polymarket.com/event/what-price-will-bitcoin-hit-in-september-2026",
+      "cluster": 2,
+      "engagement": {
+        "liquidity": 1892042.7069,
+        "volume": 14437833.073339004
+      },
+      "published_at": "2026-10-01",
+      "relevance_score": 0.4518,
+      "source": "polymarket",
+      "summary": "down 2.9% this month",
+      "title": "What price will Bitcoin hit in September?",
+      "url": "https://polymarket.com/event/what-price-will-bitcoin-hit-in-september-2026"
+    },
+    {
+      "candidate_id": "https://polymarket.com/event/bitcoin-price-on-october-1-2026",
+      "cluster": 3,
+      "engagement": {
+        "liquidity": 272746.16991,
+        "volume": 40572.428101
+      },
+      "published_at": "2026-10-01",
+      "relevance_score": 0.4514,
+      "source": "polymarket",
+      "summary": "down 5.1% today",
+      "title": "Bitcoin price on October 1?",
+      "url": "https://polymarket.com/event/bitcoin-price-on-october-1-2026"
+    },
+    {
+      "candidate_id": "https://github.com/jjakimoto/research-issues/issues/1356",
+      "cluster": 4,
+      "engagement": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "published_at": "2026-09-07",
+      "relevance_score": 0.3011,
+      "source": "github",
+      "summary": "**Topic:** Quantitative trading; machine learning for quant & trading; agentic coding techniques; LLMs & multimodal LLMs; and autonomous research (autoresearch / AI-scientist) systems \u2014 methods, papers, tools  \n**Date:** 2026-09-07\n\n**Source:** arxiv \u00b7 2026-09-04\n**Link:** https://arxiv.org/abs/2609",
+      "title": "Latest: PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting",
+      "url": "https://github.com/jjakimoto/research-issues/issues/1356"
+    }
+  ],
+  "schema_version": "1.3",
+  "source_status": {
+    "github": "ok",
+    "polymarket": "ok"
+  },
+  "window_days": 30
+}
