@@ -25,6 +25,14 @@ Owner does **not** know Python. So:
 - X/Twitter off by default. Credentials to upstream via env only. No secrets in repo.
 - Additive changes only within `/v1`.
 
+## Layout and commands
+
+- `app/` service: `config`, `models` (API shapes), `normalizer` (upstream JSON -> models), `runner` (subprocess + env allowlist), `db` (SQLite), `jobs` (queue/cache/cancel/recovery), `webhooks`, `main` (routes), `openapi_schema` (export).
+- `tests/` offline; `tests/fixtures/` are real recorded upstream outputs. `scripts/` = upstream bump/check and live smoke.
+- `openapi.yaml` is **generated** from the app (`uv run python -m app.openapi_schema`); CI fails on drift. Regenerate after any route or model change.
+- Before finishing any change: `uv run ruff check . && uv run ruff format --check . && uv run mypy app scripts && uv run pytest`.
+- Upstream facts and field mappings live in `spec.md` section 12.
+
 ## Stack
 
 Python 3.12+, FastAPI, Pydantic v2, SQLite, Ruff, mypy, pytest. Docker image targets arm64 (Oracle A1) — check wheels.

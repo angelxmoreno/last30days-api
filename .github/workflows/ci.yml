@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy app scripts
+      - run: uv run pytest
+      - name: OpenAPI drift check
+        run: uv run python -m app.openapi_schema --check
+      - name: Lint OpenAPI
+        run: npx --yes @redocly/cli@latest lint openapi.yaml
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t last30days-api:ci .
+      - name: Container starts and /health responds
+        run: |
+          docker run -d --name api -e API_KEYS=ci-key -p 8000:8000 last30days-api:ci
+          for i in $(seq 1 30); do curl -fs http://localhost:8000/health && exit 0; sleep 1; done
+          docker logs api
+          exit 1

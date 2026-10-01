@@ -1,0 +1,37 @@
+name: Upstream bump
+on:
+  schedule:
+    - cron: "0 14 * * 1" # weekly, Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - name: Look for a newer upstream release
+        id: bump
+        run: |
+          NEW=$(uv run python -m scripts.bump_upstream --body-file pr_body.md)
+          echo "tag=$NEW" >> "$GITHUB_OUTPUT"
+      - name: Open PR (never auto-merged)
+        if: steps.bump.outputs.tag != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.bump.outputs.tag }}
+        run: |
+          BRANCH="bump-upstream-$TAG"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add UPSTREAM_REF
+          git commit -m "Bump upstream to $TAG"
+          git push --force origin "$BRANCH"
+          gh pr create --title "Bump upstream to $TAG" --body-file pr_body.md --base main --head "$BRANCH" \
+            || gh pr edit "$BRANCH" --body-file pr_body.md

@@ -1,0 +1,16 @@
+# Run the API locally, or `include:` / copy this service into another project's compose file.
+#   cp .env.example .env   (set API_KEYS)
+#   docker compose up --build
+services:
+  last30days-api:
+    build: .
+    image: last30days-api:local
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - last30days-data:/data
+    restart: unless-stopped
+
+volumes:
+  last30days-data:

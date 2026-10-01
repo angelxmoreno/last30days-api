@@ -1,0 +1,27 @@
+name: Upstream check
+# Runs on bump PRs (and by hand): doctor + one tiny real query + JSON shape diff.
+on:
+  pull_request:
+    paths: [UPSTREAM_REF]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - name: Clone pinned upstream
+        run: git clone --depth 1 --branch "$(cat UPSTREAM_REF)" https://github.com/mvanhorn/last30days-skill upstream
+      - name: Doctor, record tiny query, diff shape, normalize
+        env:
+          UPSTREAM_DIR: ${{ github.workspace }}/upstream
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run python -m scripts.check_upstream --out recorded.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recorded-upstream-output
+          path: recorded.json
+          if-no-files-found: ignore

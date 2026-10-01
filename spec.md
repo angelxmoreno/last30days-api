@@ -1,5 +1,7 @@
 # SPEC: last30days API
 
+> **Status:** phases 1-6 implemented; phase 7 deploy steps are in README (needs a Dokploy target). Deviation from section 5: `openapi.yaml` is generated from the FastAPI app (`python -m app.openapi_schema`) and committed; CI fails on drift and lints it with Redocly. This keeps the file and the code from disagreeing.
+
 Turn the [last30days](https://github.com/mvanhorn/last30days-skill) research skill (MIT, Python) into a private, API-first microservice. Claude Code builds it from this document.
 
 ## 1. Goal

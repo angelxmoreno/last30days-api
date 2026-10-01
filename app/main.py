@@ -67,7 +67,13 @@ def create_app(settings: Settings | None = None, manager: JobManager | None = No
         title="last30days API",
         version=API_VERSION,
         summary="Private API for scored social/web evidence on a topic",
+        description=(
+            "Async research jobs over the last30days engine. Authenticate with "
+            "`Authorization: Bearer <key>`. Errors are `application/problem+json` with a stable "
+            "`code`. Additive changes are allowed within /v1; breaking changes need /v2."
+        ),
         lifespan=lifespan,
+        servers=[{"url": "http://localhost:8000", "description": "Local / compose default"}],
         docs_url=None,
         redoc_url=None,
         openapi_url=None,
@@ -85,7 +91,13 @@ def create_app(settings: Settings | None = None, manager: JobManager | None = No
 
     Auth = Depends(auth)
 
-    @app.get("/health", operation_id="getHealth", tags=["meta"], summary="Liveness (no auth)")
+    @app.get(
+        "/health",
+        operation_id="getHealth",
+        tags=["meta"],
+        summary="Liveness (no auth)",
+        openapi_extra={"security": []},
+    )
     async def health() -> dict[str, str]:
         return {"status": "ok"}
 

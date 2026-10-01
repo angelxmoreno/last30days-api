@@ -1,0 +1,37 @@
+name: Live smoke
+# Daily, non-blocking. One tiny real query on zero-config sources. Never gates merges.
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: docker build -t last30days-api:smoke .
+      - name: Start API
+        run: |
+          docker run -d --name api -e API_KEYS=smoke-key -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
+            -p 8000:8000 last30days-api:smoke
+          for i in $(seq 1 30); do curl -fs http://localhost:8000/health && break; sleep 1; done
+      - name: Smoke query
+        id: smoke
+        run: uv run python -m scripts.smoke http://localhost:8000 smoke-key 2>&1 | tee smoke.log
+      - name: Open or update the tracking issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY="Live smoke failed: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"$'\n\n```\n'"$(tail -n 30 smoke.log 2>/dev/null)"$'\n```'
+          N=$(gh issue list --label live-smoke --state open --json number --jq '.[0].number')
+          if [[ -n "$N" ]]; then gh issue comment "$N" --body "$BODY"
+          else gh label create live-smoke --color d93f0b 2>/dev/null || true
+               gh issue create --title "Live smoke test failing" --label live-smoke --body "$BODY"; fi
