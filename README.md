@@ -63,7 +63,7 @@ All via environment variables. See [`.env.example`](.env.example) for the full l
 | `API_KEYS` | required | Comma-separated bearer keys |
 | `DATA_DIR` | `/data` | SQLite DB and stored raw output |
 | `MAX_CONCURRENT_JOBS` / `MAX_QUEUE_DEPTH` | 2 / 20 | Worker pool and queue cap (then `503` + `Retry-After`) |
-| `DEFAULT_TIMEOUT_SECONDS` | 900 | Documented default; per-request `timeout_seconds` (30-1800) applies |
+| `DEFAULT_TIMEOUT_SECONDS` | 900 | Used when a request omits `timeout_seconds` (30-1800) |
 | `RETENTION_DAYS` | 30 | Jobs and raw output are purged after this |
 | `WEBHOOK_SECRET`, `WEBHOOK_ALLOW_PRIVATE` | unset, false | Needed for webhooks; private targets blocked unless `true` |
 | `SOURCES_EXCLUDE_DEFAULT` | `x` | Sources always off. X stays off (cookie-based access breaks its terms) |

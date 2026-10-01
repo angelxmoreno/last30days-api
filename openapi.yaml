@@ -425,11 +425,12 @@ components:
           title: Force Refresh
           default: false
         timeout_seconds:
-          type: integer
-          maximum: 1800.0
-          minimum: 30.0
+          anyOf:
+          - type: integer
+            maximum: 1800.0
+            minimum: 30.0
+          - type: 'null'
           title: Timeout Seconds
-          default: 900
         webhook_url:
           anyOf:
           - type: string
@@ -858,11 +859,12 @@ components:
           title: Force Refresh
           default: false
         timeout_seconds:
-          type: integer
-          maximum: 1800.0
-          minimum: 30.0
+          anyOf:
+          - type: integer
+            maximum: 1800.0
+            minimum: 30.0
+          - type: 'null'
           title: Timeout Seconds
-          default: 900
         webhook_url:
           anyOf:
           - type: string

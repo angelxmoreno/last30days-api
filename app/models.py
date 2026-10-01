@@ -43,7 +43,7 @@ class _RunOptions(BaseModel):
     model_config = ConfigDict(extra="forbid")
     max_age_seconds: int = Field(21600, ge=0, le=2_592_000)
     force_refresh: bool = False
-    timeout_seconds: int = Field(900, ge=30, le=1800)
+    timeout_seconds: int | None = Field(None, ge=30, le=1800)  # None = DEFAULT_TIMEOUT_SECONDS
     webhook_url: str | None = Field(None, max_length=2000)
     client_ref: str | None = Field(None, max_length=200)
 

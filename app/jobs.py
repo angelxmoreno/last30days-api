@@ -121,6 +121,7 @@ class JobManager:
     # ---- submit / cancel -------------------------------------------------------------
     async def submit(self, kind: str, req: ResearchRequest | DiscoverRequest) -> dict[str, Any]:
         request = req.model_dump()
+        request["timeout_seconds"] = req.timeout_seconds or self.s.default_timeout_seconds
         if req.webhook_url:
             if not self.s.webhook_secret:
                 raise ApiError(422, "invalid_request", "webhook_url needs WEBHOOK_SECRET set on the server")

@@ -403,3 +403,11 @@ def test_webhook_sent_on_terminal_state(make_client: Factory) -> None:
             time.sleep(0.02)
     assert sent and sent[0][0] == "http://127.0.0.1:9/h"
     assert json.loads(sent[0][1])["status"] == "succeeded"
+
+
+def test_default_timeout_comes_from_settings(make_client: Factory) -> None:
+    client, eng, _ = make_client(default_timeout_seconds=123)
+    wait_for(client, research(client).json()["id"])
+    assert eng.calls[0][2] == 123
+    wait_for(client, research(client, "other topic", timeout_seconds=45).json()["id"])
+    assert eng.calls[1][2] == 45

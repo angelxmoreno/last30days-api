@@ -21,7 +21,7 @@ Owner does **not** know Python. So:
 - Per-job temp dir with `--save-dir` inside it. Never upstream's default `~/Documents/Last30Days`.
 - Never guess values in the normalizer. Missing required field = `schema_mismatch`, keep raw output.
 - Errors are `application/problem+json` with the stable `code` list in spec section 4.
-- `openapi.yaml` is hand-authored and authoritative; Pydantic models mirror it. CI fails on drift.
+- `openapi.yaml` is committed and is the client contract; it is generated from the app, and CI fails on drift.
 - X/Twitter off by default. Credentials to upstream via env only. No secrets in repo.
 - Additive changes only within `/v1`.
 
@@ -39,7 +39,7 @@ Python 3.12+, FastAPI, Pydantic v2, SQLite, Ruff, mypy, pytest. Docker image tar
 
 ## Build order
 
-Follow spec section 10 phases in order. Start with section 11 (read upstream docs, confirm real flags/JSON fields, update spec) before writing code.
+Phases 1-6 of spec section 10 are done; phase 7 (deploy) is documented in the README and needs a Dokploy target. Section 11 is done; findings are in spec section 12.
 
 ## Git
 
