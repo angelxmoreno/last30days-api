@@ -58,3 +58,16 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      # Docker Hub's Overview tab is separate from the image; copy docker-readme.md there on
+      # releases (and manual runs). Updating it can need a token with broader scope than
+      # read/write, so a failure here warns instead of failing the release.
+      - name: Sync Docker Hub overview
+        if: steps.creds.outputs.ok == 'true' && (github.ref_type == 'tag' || github.event_name == 'workflow_dispatch')
+        continue-on-error: true
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: angelxmoreno/last30days-api
+          short-description: Private HTTP API for scored social and web evidence on any topic (last30days engine)
+          readme-filepath: ./docker-readme.md
