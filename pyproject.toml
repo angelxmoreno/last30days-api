@@ -3,6 +3,8 @@ name = "last30days-api"
 version = "0.1.0"
 description = "Private HTTP API wrapper around the last30days research CLI"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = [
   "fastapi>=0.115",

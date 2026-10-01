@@ -1,5 +1,4 @@
 extends:
   - recommended
 rules:
-  info-license: off          # license not chosen yet
   operation-4xx-response: off  # /health cannot fail with a 4xx

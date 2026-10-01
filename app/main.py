@@ -73,6 +73,7 @@ def create_app(settings: Settings | None = None, manager: JobManager | None = No
             "`code`. Additive changes are allowed within /v1; breaking changes need /v2."
         ),
         lifespan=lifespan,
+        license_info={"name": "MIT", "identifier": "MIT"},
         servers=[{"url": "http://localhost:8000", "description": "Local / compose default"}],
         docs_url=None,
         redoc_url=None,

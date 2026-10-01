@@ -6,6 +6,9 @@ info:
   description: 'Async research jobs over the last30days engine. Authenticate with
     `Authorization: Bearer <key>`. Errors are `application/problem+json` with a stable
     `code`. Additive changes are allowed within /v1; breaking changes need /v2.'
+  license:
+    name: MIT
+    identifier: MIT
   version: 1.0.0
 servers:
 - url: http://localhost:8000

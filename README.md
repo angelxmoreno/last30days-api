@@ -90,7 +90,61 @@ API_KEYS=dev DATA_DIR=./data UPSTREAM_DIR=./upstream uv run uvicorn app.asgi:app
 
 ## Docker
 
-Docker lives in this repo: `Dockerfile`, `.dockerignore`, `compose.yaml`. The image clones the pinned upstream at build time, installs `yt-dlp` (optional YouTube source), runs as a non-root user, and keeps state in the `/data` volume. Other projects can copy the `last30days-api` service from `compose.yaml` into their own compose file and call `http://last30days-api:8000` over the compose network.
+Docker lives in this repo: `Dockerfile`, `.dockerignore`, `compose.yaml`. The image clones the pinned upstream at build time, installs `yt-dlp` (optional YouTube source), runs as a non-root user, and keeps state in the `/data` volume.
+
+### Run with Docker Compose
+
+Needs Docker with the Compose plugin (`docker compose version`).
+
+1. **Create your env file.** `compose.yaml` reads `.env`, and Compose refuses to start without it.
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` and set `API_KEYS` to one or more long random strings (comma-separated). Generate one with `openssl rand -hex 32`. Add optional credentials like `GITHUB_TOKEN` here too.
+2. **Start it.**
+   ```bash
+   docker compose up --build -d     # first build clones the pinned upstream, takes a minute
+   ```
+3. **Check it.**
+   ```bash
+   docker compose ps                          # STATUS should become "healthy"
+   curl localhost:8000/health                 # {"status":"ok"}
+   curl -H "Authorization: Bearer <a key from API_KEYS>" localhost:8000/v1/version
+   ```
+4. **Day to day.**
+   ```bash
+   docker compose logs -f last30days-api      # watch logs
+   docker compose restart last30days-api      # after editing .env
+   docker compose up --build -d               # after pulling new code or bumping UPSTREAM_REF
+   docker compose down                        # stop; job data is kept in the named volume
+   docker compose down -v                     # stop AND delete all job data
+   ```
+
+Job history, cached results and raw output live in the `last30days-data` volume, so they survive restarts and rebuilds. To change the host port, edit the `ports` line in `compose.yaml` (for example `"9000:8000"`).
+
+### Use it from another project's compose file
+
+Option A: include this service (Compose 2.20+). Services in one compose project share a network, so your app reaches the API by service name.
+
+```yaml
+# your-app/compose.yaml
+include:
+  - path: ../last30days-api/compose.yaml   # adjust to where you cloned this repo
+
+services:
+  your-app:
+    build: .
+    environment:
+      LAST30DAYS_API_URL: http://last30days-api:8000
+      LAST30DAYS_API_KEY: ${LAST30DAYS_API_KEY}   # one of the keys in this repo's .env
+    depends_on:
+      last30days-api:
+        condition: service_healthy
+```
+
+Note that `include` resolves the `.env` and build context relative to this repo's compose file, so run `cp .env.example .env` here first.
+
+Option B: run this stack on its own (steps above) and call it over the published port: `http://localhost:8000` from the host, or `http://host.docker.internal:8000` from inside another container (Docker Desktop).
 
 ## CI
 
@@ -111,4 +165,4 @@ Built with [Claude Code](https://claude.com/claude-code). Research engine: [mvan
 
 ## License
 
-Not chosen yet.
+[MIT](LICENSE)
