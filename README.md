@@ -122,6 +122,40 @@ Needs Docker with the Compose plugin (`docker compose version`).
 
 Job history, cached results and raw output live in the `last30days-data` volume, so they survive restarts and rebuilds. To change the host port, edit the `ports` line in `compose.yaml` (for example `"9000:8000"`).
 
+### Published image
+
+Prebuilt multi-arch images (amd64 + arm64) are published to Docker Hub as [`angelxmoreno/last30days-api`](https://hub.docker.com/r/angelxmoreno/last30days-api), so you can run it without cloning this repo:
+
+| Tag | Meaning |
+|---|---|
+| `1.2.3` | Exact release |
+| `1.2` / `1` | Newest release in that line (like `mariadb:11`; no major-only tag for `0.x`) |
+| `latest` | Newest release |
+| `edge` | Latest commit on `main` (may be unreleased) |
+
+```bash
+docker run -d --name last30days-api \
+  -e API_KEYS=$(openssl rand -hex 32) \
+  -v last30days-data:/data -p 8000:8000 \
+  angelxmoreno/last30days-api:1
+```
+
+Or in any compose file, no `build:` needed:
+
+```yaml
+services:
+  last30days-api:
+    image: angelxmoreno/last30days-api:1
+    environment:
+      API_KEYS: ${LAST30DAYS_API_KEYS}
+    volumes:
+      - last30days-data:/data
+volumes:
+  last30days-data:
+```
+
+**Releasing (maintainer):** one-time setup, create a public repository `last30days-api` on Docker Hub and add repo secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` (a read/write access token) with `gh secret set`. Then publish a version with `git tag v1.0.0 && git push origin v1.0.0`; the "Publish image" workflow builds and pushes it. Pushes to `main` publish `:edge`. The pinned upstream is baked into each image, so cut a new tag after merging an upstream bump.
+
 ### Use it from another project's compose file
 
 Option A: include this service (Compose 2.20+). Services in one compose project share a network, so your app reaches the API by service name.
@@ -151,6 +185,7 @@ Option B: run this stack on its own (steps above) and call it over the published
 - **CI** (every PR): Ruff, mypy, pytest, OpenAPI drift check, Redocly lint, Docker build + `/health`.
 - **Upstream bump** (weekly + manual): opens a PR bumping `UPSTREAM_REF` with release notes. Never auto-merged.
 - **Upstream check** (on bump PRs): upstream doctor, one tiny real query, JSON shape diff against the fixture, normalizer run.
+- **Publish image** (push to `main` or a `v*` tag): builds the multi-arch image and pushes it to Docker Hub. Skips with a notice until the Docker Hub secrets exist.
 - **Live smoke** (daily, non-blocking): one tiny real query through the built container; failures open or update one tracking issue.
 
 ## Docs

@@ -51,4 +51,4 @@ Phases 1-6 of spec section 10 are done. Deployment is out of scope (no deploy do
 
 ## Docker scope
 
-**Decision: all Docker files live in this repo.** `Dockerfile`, `.dockerignore`, and a `compose.yaml` for local runs / for client apps to spin the service up. The image is built and health-checked in this repo's CI. Don't create a separate Docker repo. Only revisit if a multi-service stack (this API + client apps) is wanted later.
+**Decision: all Docker files live in this repo.** `Dockerfile`, `.dockerignore`, and a `compose.yaml` for local runs / for client apps to spin the service up. The image is built and health-checked in this repo's CI. Don't create a separate Docker repo. The image is published to Docker Hub as `angelxmoreno/last30days-api` by `.github/workflows/publish.yml` (tag `vX.Y.Z` to release, `main` -> `:edge`). Only revisit if a multi-service stack (this API + client apps) is wanted later.
