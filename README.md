@@ -99,15 +99,6 @@ Docker lives in this repo: `Dockerfile`, `.dockerignore`, `compose.yaml`. The im
 - **Upstream check** (on bump PRs): upstream doctor, one tiny real query, JSON shape diff against the fixture, normalizer run.
 - **Live smoke** (daily, non-blocking): one tiny real query through the built container; failures open or update one tracking issue.
 
-## Deploy (Dokploy + Traefik, Oracle A1 arm64)
-
-1. Create an Application from this GitHub repo, build type `Dockerfile`.
-2. Set env vars (`API_KEYS` at minimum) and mount a persistent volume at `/data`.
-3. Route a domain through Traefik to container port 8000, or keep it on an internal network only if the client runs on the same host.
-4. Health check path: `/health`.
-
-The image is pure Python plus `yt-dlp`, so arm64 needs no special wheels (verified building on arm64).
-
 ## Docs
 
 - [`spec.md`](spec.md) — design, API contract, confirmed upstream facts (section 12)

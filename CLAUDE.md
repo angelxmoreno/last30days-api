@@ -35,11 +35,11 @@ Owner does **not** know Python. So:
 
 ## Stack
 
-Python 3.12+, FastAPI, Pydantic v2, SQLite, Ruff, mypy, pytest. Docker image targets arm64 (Oracle A1) — check wheels.
+Python 3.12+, FastAPI, Pydantic v2, SQLite, Ruff, mypy, pytest. Docker image must also build on arm64.
 
 ## Build order
 
-Phases 1-6 of spec section 10 are done; phase 7 (deploy) is documented in the README and needs a Dokploy target. Section 11 is done; findings are in spec section 12.
+Phases 1-6 of spec section 10 are done. Deployment is out of scope (no deploy docs, no hosting config). Section 11 is done; findings are in spec section 12.
 
 ## Git
 

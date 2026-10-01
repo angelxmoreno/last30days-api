@@ -1,6 +1,6 @@
 # SPEC: last30days API
 
-> **Status:** phases 1-6 implemented; phase 7 deploy steps are in README (needs a Dokploy target). Deviation from section 5: `openapi.yaml` is generated from the FastAPI app (`python -m app.openapi_schema`) and committed; CI fails on drift and lints it with Redocly. This keeps the file and the code from disagreeing.
+> **Status:** phases 1-6 implemented; deployment is out of scope. Deviation from section 5: `openapi.yaml` is generated from the FastAPI app (`python -m app.openapi_schema`) and committed; CI fails on drift and lints it with Redocly. This keeps the file and the code from disagreeing.
 
 Turn the [last30days](https://github.com/mvanhorn/last30days-skill) research skill (MIT, Python) into a private, API-first microservice. Claude Code builds it from this document.
 
@@ -8,14 +8,14 @@ Turn the [last30days](https://github.com/mvanhorn/last30days-skill) research ski
 
 A private HTTP service that takes a topic and returns scored evidence from social and web sources (Reddit, Hacker News, Polymarket, GitHub, etc.) as JSON. A separate Bun/TypeScript app (the editorial pipeline, out of scope here) is the client.
 
-**In scope:** wrapper service, async jobs, caching, tests, CI, OpenAPI file, Docker deploy.
+**In scope:** wrapper service, async jobs, caching, tests, CI, OpenAPI file, Docker image.
 **Out of scope:** LLM calls, claim labeling, script writing, public or multi-user access, changing upstream code.
 
 ## 2. Decisions already made
 
 - **Private only.** Static bearer API keys. No public exposure.
 - **Wrapper, not fork.** Upstream is pinned and never modified.
-- **Python 3.12+ / FastAPI / Pydantic v2 / SQLite.** Deploys as one container on Oracle A1.Flex (arm64) via Dokploy + Traefik.
+- **Python 3.12+ / FastAPI / Pydantic v2 / SQLite.** Ships as one Docker image (must build on arm64 and amd64).
 - **Call the upstream CLI as a subprocess with `--emit=json`.** Do not import upstream modules. The CLI and its documented JSON export are the only contract we depend on.
 - **Docker in this repo.** `Dockerfile`, `.dockerignore`, and `compose.yaml` (for local use and for client apps to spin the service up) live here, not in a separate repo.
 - **Async jobs.** Runs take minutes.
@@ -140,7 +140,6 @@ The allowlist lives in one constant in code. The repo ships `.env.example` listi
 4. **Sources and discover:** `/v1/sources`, `/v1/discover`.
 5. **Webhooks, rate limits, purge.**
 6. **OpenAPI file and CI hardening:** `openapi.yaml`, drift check, bump workflow, live smoke.
-7. **Deploy:** Dokploy on Oracle A1 (check Node, yt-dlp, and Python wheels on arm64), Traefik route, internal network if the Bun service is co-located.
 
 ## 11. First step for Claude Code
 
@@ -213,7 +212,7 @@ Mapping to our `DiscoverResult.topics[]`: `name`=`topic`, `score`=`velocity_scor
 
 ### Image / platform
 
-- Image needs: Python 3.12, `yt-dlp` (optional YouTube), Node only if we enable `npx`-installed CLIs (we do not; skip Node in v1 and keep the image small). `ffmpeg` is not needed for evidence-only runs. Confirm yt-dlp arm64 install in phase 7.
+- Image needs: Python 3.12, `yt-dlp` (optional YouTube), Node only if we enable `npx`-installed CLIs (we do not; skip Node in v1 and keep the image small). `ffmpeg` is not needed for evidence-only runs.
 - Local dev machine has Python 3.9 as `python3`. Use `uv` (already installed) to get 3.12: `uv python install 3.12`.
 
 ### Corrections to apply to earlier sections
